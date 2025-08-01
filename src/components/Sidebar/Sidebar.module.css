@@ -1,0 +1,142 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    overflow-y: auto;
+  }
+  
+  .sidebar.dark {
+    background: #2d3748;
+    color: #f7fafc;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .dark .header {
+    border-bottom: 1px solid #4a5568;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .toggleButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuSection {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .dark .menuSection {
+    border-bottom: 1px solid #4a5568;
+  }
+  
+  .menuTitle {
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #718096;
+    margin-bottom: 5px;
+  }
+  
+  .dark .menuTitle {
+    color: #a0aec0;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menuItem {
+    padding: 0 10px;
+  }
+  
+  .menuLink {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .menuLink:hover {
+    background: #edf2f7;
+  }
+  
+  .dark .menuLink:hover {
+    background: #4a5568;
+  }
+  
+  .menuIcon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+  }
+  
+  .menuLabel {
+    white-space: nowrap;
+  }
+  
+  .active {
+    background: #ebf8ff;
+  }
+  
+  .dark .active {
+    background: #2d3748;
+  }
+  
+  .bottomMenu {
+    margin-top: auto;
+    padding: 15px 0;
+  }
+  
+  /* Collapsed state */
+  .sidebar.collapsed .menuLabel,
+  .sidebar.collapsed .menuTitle,
+  .sidebar.collapsed .logo {
+    display: none;
+  }
+  
+  .sidebar.collapsed .menuLink {
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .sidebar.collapsed .menuIcon {
+    margin-right: 0;
+  }

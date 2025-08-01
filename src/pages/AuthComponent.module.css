@@ -1,0 +1,129 @@
+.authWrapper {
+    position: relative;
+    width: 800px;
+    max-width: 98vw;
+    height: 480px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-radius: 30px;
+    background: #fff;
+    overflow: hidden;
+  }
+  
+  .formSide {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    transition: transform 1.5s cubic-bezier(0.77,0,0.175,1);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .formSide.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+  }
+  
+  #registerSide {
+    left: 0;
+    transform: translateY(-600px);
+  }
+  
+  #registerSide.active {
+    transform: translateY(0);
+    z-index: 2;
+  }
+  
+  #loginSide {
+    left: 0;
+    transform: translateY(500px);
+  }
+  
+  #loginSide.active {
+    transform: translateY(0);
+    z-index: 2;
+  }
+  
+  .formSide h2 {
+    margin-bottom: 18px;
+    color: #0072ff;
+  }
+  
+  .formSide form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  .formSide input {
+    margin-bottom: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .formSide button[type="submit"] {
+    background: #0072ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  
+  .formSide button[type="submit"]:hover {
+    background: #005bb5;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, #00c6ff, #0072ff);
+    border-radius: 3000px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transform: rotate(0deg);
+    z-index: 2;
+    transition: transform 1s cubic-bezier(0.77,0,0.175,1);
+  }
+  
+  .overlay.left {
+    transform: rotate(180deg);
+  }
+  
+  .overlayBtn {
+    min-width: 140px;
+    padding: 20px 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background: #fff;
+    color: #0072ff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    z-index: 3;
+  }
+  
+  .overlayBtn:hover {
+    background: #0072ff;
+    color: #fff;
+  }
