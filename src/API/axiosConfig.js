@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Create axios instance with default config
-const baseURL = 'http://18.215.231.246:8080';
+const baseURL = 'http://localhost:8080';
 const axiosInstance = axios.create({
   baseURL: baseURL,
   headers: {
