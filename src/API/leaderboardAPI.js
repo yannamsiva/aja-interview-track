@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use Vite's import.meta.env instead of process.env
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://18.215.231.246:8080/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 /**
  * Fetches the mock interview performance data for the leaderboard
