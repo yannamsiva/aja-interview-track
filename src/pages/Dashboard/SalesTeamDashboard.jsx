@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles ./sales.module.css;
+import styles from ./sales.module.css;
 import {
   FiUsers,
   FiCalendar,
