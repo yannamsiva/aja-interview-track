@@ -41,7 +41,6 @@ import {
   FiStar,
 } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
-import styles from "./Sales.module.css";
 import {
   getCandidates,
   scheduleClientInterview,
