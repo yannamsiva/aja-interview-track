@@ -1,6 +1,6 @@
 import axios from 'axios';
-
-const baseURL = 'http://localhost:8080';
+const baseURL ="/api";
+//const baseURL = 'http://localhost:8080';
 
 // Create a clean axios instance for authentication (without JWT token)
 const authAxios = axios.create({
